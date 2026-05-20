@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\AuthClienteController;
+use App\Http\Controllers\UsuarioController;
 
 
 /*
@@ -23,6 +24,7 @@ use App\Http\Controllers\AuthClienteController;
 Route::apiResource('medicamento', MedicamentoController::class);
 Route::apiResource('categoria', CategoriaController::class);
 Route::apiResource('cliente', ClienteController::class);
+Route::apiResource('usuario', UsuarioController::class);
 
 //publicas
 Route::post('registro', [AuthClienteController::class, 'register']);
