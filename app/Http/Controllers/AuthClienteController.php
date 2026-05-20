@@ -58,6 +58,11 @@ class AuthClienteController extends Controller
             'token' => $token,
             'cliente' => $cliente
         ]);
+
+        $admin = DB::table('administrador')
+            ->where('id_usuario',
+                    $usuario->id_usuario)
+            ->exists();
     }
 
     public function logout(Request $request)
